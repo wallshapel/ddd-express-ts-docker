@@ -1,0 +1,10 @@
+node_modules
+src
+.dockerignore
+.env
+.env.example
+.gitignore
+.docker-compose.yml
+Dockerfile
+tsconfig.json
+package-lock.json

@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+      container_name: ddd
+      restart: always
+      build: .
+      ports:
+        - "3000:3000"
+      links:
+        - mongo
+      environment:
+        - HOST=0.0.0.0
+        - PORT=3000
+        - MONGO_HOST=mongo
+        - MONGODB_PORT=27017
+        - MONGODB_DB=ddd_ts        
+  mongo:
+    container_name: mongoDB  
+    image: mongo
+    ports:
+      - "27017:27017"
